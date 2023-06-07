@@ -1,0 +1,271 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+body {
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Landing Page */
+
+.banner {
+    z-index: 1;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 800;
+    margin-left: 48px;
+    color: white;
+    font-size: 36px;
+}
+
+.navbar ul {
+    margin-right: 48px;
+}
+
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #160053;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    height: 50vh;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.content h1 {
+    font-size: 42px;
+}
+
+.content div {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+/* Background */
+
+.section-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.section-background .background {
+    transform: translateY(20%);
+}
+
+.section-background .row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    white-space: nowrap;
+    font-size: 64px;
+    transform: rotate(-20deg);
+    top: -50%;
+}
+
+.section-background i {
+    color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    padding: 0 5px;
+    user-select: none;
+    cursor: default;
+}
+
+.section-background i:hover {
+    color: #f00;
+    transition: 0s;
+    text-shadow: 0 0 120px #f00;
+}
+
+.section-background .row div {
+    animation: animate1 80s linear infinite;
+    animation-delay: -80s;
+}
+
+.section-background .row div:nth-child(2) {
+    animation: animate2 80s linear infinite;
+    animation-delay: -40s;
+}
+
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(100%)
+    }
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0%)
+    }
+    100% {
+        transform: translateX(-200%)
+    }
+}
+
+.section-background .row:nth-child(even) div {
+    animation: animate3 80s linear infinite;
+    animation-delay: -80s;
+}
+
+.section-background .row:nth-child(even) div:nth-child(2) {
+    animation: animate4 80s linear infinite;
+    animation-delay: -40s;
+}
+
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(-100%)
+    }
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateX(-200%)
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+/* Contact Form */
+.container {
+    margin-top: 24px;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.contact-box {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box h2 {
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.contact-box h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+
+.field {
+    width: 50%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.field:hover {
+    background-color: rgba(161, 161, 161, 0.1)
+}
+
+.field:focus {
+    background-color: rgba(161, 161, 161, 0.1);
+    border: 2px solid rgba(192, 0, 0, 0.5)
+}
+
+.area {
+    min-height: 150px;
+}
+
+.send {
+    position: absolute;
+    right: 5%;
+    transform: translateY(-180%);
+    width: 200px;
+    height: 40px;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #f00;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.send:hover {
+    background-color:rgb(184, 0, 0);
+}
