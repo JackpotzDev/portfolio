@@ -1,22 +1,9 @@
-## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
-## General info
-This project is simple Lorem ipsum dolor generator.
+## Portfolio JackpotZ
+This is my portfolio created using pure HTML and CSS (no frameworks), you can visit the website on [https://epzy](https://jackpotz.epizy.com/)
 	
-## Technologies
+## Sepcificatio,s
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
-	
-## Setup
-To run this project, install it locally using npm:
-
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
+* HTML version : 5
+* CSS version : 3
+* FontAwesome : https://kit.fontawesome.com/9556eae611.js
+* STMP : https://smtpjs.com/v3/smtp.js
