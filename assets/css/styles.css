@@ -29,13 +29,6 @@ html {
     justify-content: space-between;
 }
 
-.title {
-    font-weight: 800;
-    margin-left: 48px;
-    color: white;
-    font-size: 36px;
-}
-
 .navbar ul {
     display: block;
     margin-right: 48px;
